@@ -1,0 +1,44 @@
+.loading-wrapper{
+	width: 100%;
+    background-color: #a71f24;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
+	.loading-spinner {
+		width: 200px;
+		height: 100px;
+		position: relative;
+		transform: translateZ(0) scale(1);
+		backface-visibility: hidden;
+		transform-origin: 0 0;	
+		div {
+			position: absolute;
+			animation: loading-spinner 1s linear infinite;
+			width: 160px;
+			height: 160px;
+			top: 20px;
+			left: 20px;
+			border-radius: 50%;
+			box-shadow: 0 4px 0 0 #ffffff;
+			transform-origin: 80px 82px;
+			box-sizing: content-box;
+		}
+	}
+}
+
+@keyframes loading-spinner {
+	0% {
+		transform: rotate(0deg)
+	}
+
+	50% {
+		transform: rotate(180deg)
+	}
+
+	100% {
+		transform: rotate(360deg)
+	}
+}
